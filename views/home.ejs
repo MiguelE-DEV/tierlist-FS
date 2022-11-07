@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Tier List</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/58eb5e6d41.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<h1>Fruit Tier List</h1>
+		<div class="tierList">
+			<div class="tiers">
+				<div class="sTier">
+					<aside class="s">S</aside>
+					<% for(let i= 0; i < sRank.length; i++){%>
+						<p class="item">
+							<span><%= sRank[i].name%></span>
+							<button class="editBtn"><i class="fa-solid fa-pen-to-square editBtnI"></i></button>
+							<button class="deleteBtn">
+								<i class="fa-solid fa-xmark deleteBtnI"></i>
+								<span class="hidden"><%= sRank[i]._id %></span>
+							</button>
+						</p>
+					<%}%>
+				</div>
+				<div class="aTier">
+					<aside class="a">A</aside>
+					<% for(let i= 0; i < aRank.length; i++){%>
+						<p class="item">
+							<span><%= aRank[i].name%></span>
+							<button class="editBtn"><i class="fa-solid fa-pen-to-square editBtnI"></i></button>
+							<button class="deleteBtn">
+								<i class="fa-solid fa-xmark deleteBtnI"></i>
+								<span class="hidden"><%= aRank[i]._id %></span>
+							</button>
+						</p>
+					<%}%>
+				</div>
+				<div class="bTier">
+					<aside class="b">B</aside>
+					<% for(let i= 0; i < bRank.length; i++){%>
+						<p class="item">
+							<span><%= bRank[i].name%></span>
+							<button class="editBtn"><i class="fa-solid fa-pen-to-square editBtnI"></i></button>
+							<button class="deleteBtn">
+								<i class="fa-solid fa-xmark deleteBtnI"></i>
+								<span class="hidden"><%= bRank[i]._id %></span>
+							</button>
+						</p>
+					<%}%>
+				</div>
+				<div class="cTier">
+					<aside class="c">C</aside>
+					<% for(let i= 0; i < cRank.length; i++){%>
+						<p class="item">
+							<span><%= cRank[i].name%></span>
+							<button class="editBtn"><i class="fa-solid fa-pen-to-square editBtnI"></i></button>
+							<button class="deleteBtn">
+								<i class="fa-solid fa-xmark deleteBtnI"></i>
+								<span class="hidden"><%= cRank[i]._id %></span>
+							</button>
+						</p>
+					<%}%>
+				</div>
+				<div class="dTier">
+					<aside class="d">D</aside>
+					<% for(let i= 0; i < dRank.length; i++){%>
+						<p class="item">
+							<span><%= dRank[i].name%></span>
+							<button class="editBtn"><i class="fa-solid fa-pen-to-square editBtnI"></i></button>
+							<button class="deleteBtn">
+								<i class="fa-solid fa-xmark deleteBtnI"></i>
+								<span class="hidden"><%= dRank[i]._id %></span>
+							</button>
+						</p>
+					<%}%>
+				</div>
+				<div class="eTier">
+					<aside class="e">E</aside>
+					<% for(let i= 0; i < eRank.length; i++){%>
+						<p class="item">
+							<span><%= eRank[i].name%></span>
+							<button class="editBtn"><i class="fa-solid fa-pen-to-square editBtnI"></i></button>
+							<button class="deleteBtn">
+								<i class="fa-solid fa-xmark deleteBtnI"></i>
+								<span class="hidden"><%= eRank[i]._id %></span>
+							</button>
+						</p>
+					<%}%>
+				</div>
+			</div>
+			<form action="/new" method="post" class="form">
+				<input type="text" name="name" id="name" placeholder="enter fruit name">
+				<select name="rank" id="rank">
+					<option value="S-Tier">S-Tier</option>
+					<option value="A-Tier">A-Tier</option>
+					<option value="B-Tier">B-Tier</option>
+					<option value="C-Tier">C-Tier</option>
+					<option value="D-Tier">D-Tier</option>
+					<option value="E-Tier">E-Tier</option>
+				</select>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<script src="https://kit.fontawesome.com/40942b8d38.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>

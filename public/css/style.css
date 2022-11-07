@@ -1,0 +1,76 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body{
+}
+a, a:visited, a:hover, a:active{
+  color: inherit;
+  text-decoration: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header{
+}
+header{
+width: 100%;
+height: 100px;
+}
+#bigSection{
+  background-image: url(ticTacToeBackground.png);
+  width: 100%;
+  height: 1080px;
+}
+h1{
+  padding: 2% 0% 0%;
+  font-size: 60px;
+  text-align: center;
+}
+main{
+  width: 80%;
+  height: 700px;
+  margin: auto;
+}
+#grid{
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+}
+section{
+  color: white;
+  font-size: 200px;
+  text-align: center;
+  width: 33.3%;
+  height: 33.3%;
+  border: 1px solid black;
+}
+#bottom{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 75px;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
