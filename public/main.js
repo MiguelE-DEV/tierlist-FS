@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.deleteBtnI').forEach(element => {
   element.addEventListener('click', (e)=>{
     let id = e.target.parentElement.children[1].innerText
@@ -20,11 +19,11 @@ document.querySelectorAll('.deleteBtnI').forEach(element => {
     })
   })
 })
-
 document.querySelectorAll('.editBtnI').forEach(element => {
     element.addEventListener('click', (e)=>{
       console.log(e.target.parentElement.parentElement.children)
       let name = prompt('1.) Enter new Item name', e.target.parentElement.parentElement.children[0].innerText)
+      name = name.toLowerCase()
         if(name){
           var rank = prompt('2.) Now enter new Item rank, ex. B-Tier')
           let rankArray = [

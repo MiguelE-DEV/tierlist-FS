@@ -74,7 +74,7 @@ module.exports = function (app, passport, db, objectId) {
     db.collection("tiers").save(
       {
         //req.body is the request from the body. The types are name and msg
-        name: req.body.name,
+        name: req.body.name.toLowerCase(),
         rank: req.body.rank,
         userId: ObjectId(req.user._id),
         date: new Date(),
@@ -119,8 +119,10 @@ module.exports = function (app, passport, db, objectId) {
 
   app.delete("/delete", (req, res) => {
     console.log(req.body.name, req.body._id)
-    db.collection("tiers").findOneAndDelete(
-      { name: req.body.name, _id: ObjectId(req.body._id) },
+    db.collection("tiers").findOneAndDelete({
+      name: req.body.name,
+      _id: ObjectId(req.body._id) 
+    },
       (err, result) => {
         if (err) return res.send(500, err);
         res.send(result);
