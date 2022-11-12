@@ -1,3 +1,6 @@
+## Description
+A Tier List. Enter in an item and a tier to add it to the list.
+
 ## Installation
 
 1. Clone repo
